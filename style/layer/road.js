@@ -48,7 +48,34 @@ var layerMotorway = {
   ],
   layout: layoutRoad,
   source: "openmaptiles",
+  minzoom: 7,
+  metadata: {},
+  "source-layer": "transportation",
+};
+
+var layerMotorwayInterstate = {
+  id: "road_motorway_interstate",
+  type: "line",
+  paint: {
+    "line-color": colorMotorway,
+    "line-width": {
+      base: 2.5,
+      stops: [
+        [4, 1],
+        [7, 2]
+      ],
+    },
+  },
+  filter: [
+    "all",
+    ["==", "class", "motorway"],
+    ["==", "network", "us-interstate"],
+//    ["!=", "ramp", 1],
+  ],
+  layout: layoutRoad,
+  source: "openmaptiles",
   minzoom: 5,
+  maxzoom: 7,
   metadata: {},
   "source-layer": "transportation",
 };

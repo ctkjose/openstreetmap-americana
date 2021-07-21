@@ -19,7 +19,7 @@ americanaLayers.push(
 
   layerTunnelMotorwayCasing,
   layerTunnelMotorwayLinkCasing,
-  layerTunnelMotorway,
+//  layerTunnelMotorway,
   layerTunnelMotorwayLink,
   layerTunnelOneway,
   layerTunnelOnewayLink,
@@ -27,6 +27,7 @@ americanaLayers.push(
   layerMotorwayCasing,
 
   layerMotorwayLinkCasing,
+  layerMotorwayInterstate,
   layerMotorway,
   layerMotorwayLink,
   layerRoadOneway,

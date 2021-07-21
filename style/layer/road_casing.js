@@ -21,7 +21,7 @@ var layerMotorwayCasing = {
   ],
   layout: layoutRoadCasing,
   source: "openmaptiles",
-  minzoom: 6,
+  minzoom: 7,
   metadata: {},
   "source-layer": "transportation",
 };

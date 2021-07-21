@@ -51,7 +51,7 @@ var layerBridgeMotorwayCasing = {
     ["==", "brunnel", "bridge"],
     ["!=", "ramp", 1],
   ],
-  minzoom: 5,
+  minzoom: 7,
   layout: {
     "line-join": "round",
   },
@@ -109,6 +109,7 @@ var layerBridgeMotorway = {
     ["==", "brunnel", "bridge"],
     ["!=", "ramp", 1],
   ],
+  minzoom: 7,
   layout: {
     "line-join": "round",
   },

@@ -48,21 +48,26 @@ var layerMotorway = {
   ],
   layout: layoutRoad,
   source: "openmaptiles",
-  minzoom: 7,
+  minzoom: 6,
   metadata: {},
   "source-layer": "transportation",
 };
 
-var layerMotorwayInterstate = {
-  id: "road_motorway_interstate",
+var layerMotorwayInterstate12 = {
+  id: "road_motorway_interstate_12",
   type: "line",
   paint: {
-    "line-color": colorMotorway,
+    "line-color": {
+stops: [
+  [5, "hsla(354, 71%, 88%, 1)"],
+  [6, "hsla(354, 80%, 80%, 1)"]
+],
+},
     "line-width": {
-      base: 2.5,
       stops: [
-        [4, 1],
-        [7, 2]
+        [5, 1.5],
+        [6, 2],
+        [7, 3],
       ],
     },
   },
@@ -70,11 +75,66 @@ var layerMotorwayInterstate = {
     "all",
     ["==", "class", "motorway"],
     ["==", "network", "us-interstate"],
-//    ["!=", "ramp", 1],
+    ["<=", "rank", 2],
+    //    ["!=", "ramp", 1],
   ],
   layout: layoutRoad,
   source: "openmaptiles",
   minzoom: 5,
+  maxzoom: 7,
+  metadata: {},
+  "source-layer": "transportation",
+};
+
+var layerMotorwayInterstate3 = {
+  id: "road_motorway_interstate_2",
+  type: "line",
+  paint: {
+    "line-color": "hsla(354, 71%, 88%, 1)",
+    "line-width": {
+      base: 2.5,
+      stops: [
+        [6, 0.8],
+        [7, 2],
+      ],
+    },
+  },
+  filter: [
+    "all",
+    ["==", "class", "motorway"],
+    ["==", "network", "us-interstate"],
+    ["==", "rank", 3],
+    //    ["!=", "ramp", 1],
+  ],
+  layout: layoutRoad,
+  source: "openmaptiles",
+  minzoom: 6,
+  maxzoom: 7,
+  metadata: {},
+  "source-layer": "transportation",
+};
+
+var layerTrunk = {
+  id: "road_trunk",
+  type: "line",
+  paint: {
+    "line-color": "hsla(354, 15%, 80%, 1)",
+    "line-width": {
+      base: 2.5,
+      stops: [
+        [6, 0.8],
+        [7, 2],
+      ],
+    },
+  },
+  filter: [
+    "all",
+    ["==", "class", "trunk"],
+    ["!=", "ramp", 1],
+  ],
+  layout: layoutRoad,
+  source: "openmaptiles",
+  minzoom: 6,
   maxzoom: 7,
   metadata: {},
   "source-layer": "transportation",

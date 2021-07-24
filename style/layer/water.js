@@ -153,7 +153,7 @@ var layerWater = {
   id: "water",
   type: "fill",
   paint: {
-    "fill-color": "rgba(134, 204, 250, 1)",
+    "fill-color": "hsl(204, 92%, 75%)",
   },
   filter: ["all", ["!=", "intermittent", 1], ["!=", "brunnel", "tunnel"]],
   layout: {

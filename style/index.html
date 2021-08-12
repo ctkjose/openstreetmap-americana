@@ -50,6 +50,7 @@
     <script type="text/javascript" src="layer/place.js"></script>
     <script type="text/javascript" src="layer/boundary.js"></script>
     <script type="text/javascript" src="layer/park.js"></script>
+    <script type="text/javascript" src="layer/path.js"></script>
 
     <script type="text/javascript" src="layers.js"></script>
   </head>
@@ -88,8 +89,8 @@
         bearing: 0,
         sources: {
           openmaptiles: {
-            url:
-              "https://api.maptiler.com/tiles/v3/tiles.json?key=" + mapTilerKey,
+            url: "http://localhost:8080/data/v3.json",
+            //              "https://api.maptiler.com/tiles/v3/tiles.json?key=" + mapTilerKey,
             type: "vector",
           },
         },
